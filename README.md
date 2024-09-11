@@ -18,16 +18,17 @@ Sử dụng các phím mũi tên để điều khiển con rắn:
 - Left: Di chuyển sang trái
 - Right: Di chuyển sang phải
 - Nhấn phím Enter để bắt đầu trò chơi.
+
 Con rắn sẽ di chuyển và bạn cần điều khiển nó để ăn thức ăn xuất hiện ngẫu nhiên trên màn hình.
 Trò chơi kết thúc khi con rắn đâm vào tường hoặc tự cắn vào thân mình. Điểm số sẽ được hiển thị trên màn hình.
 
 CẤU TRÚC DỰ ÁN
-main.py: Tệp chính để khởi động trò chơi.
-food.py: Định nghĩa lớp Food để tạo và làm mới thức ăn.
-message.py: Định nghĩa các lớp Message, ScoreMessage, StartMessage, và GameOverMessage để hiển thị các thông báo trong trò chơi.
-snake.py: Định nghĩa lớp Snake để tạo và điều khiển con rắn.
-status.py: Định nghĩa lớp Status để quản lý trạng thái của trò chơi.
-event.py: Chứa các hàm xử lý sự kiện như con rắn ăn thức ăn, đâm vào tường, hoặc tự cắn vào thân mình.
+- main.py: Tệp chính để khởi động trò chơi.
+- food.py: Định nghĩa lớp Food để tạo và làm mới thức ăn.
+- message.py: Định nghĩa các lớp Message, ScoreMessage, StartMessage, và GameOverMessage để hiển thị các thông báo trong trò chơi.
+- snake.py: Định nghĩa lớp Snake để tạo và điều khiển con rắn.
+- status.py: Định nghĩa lớp Status để quản lý trạng thái của trò chơi.
+- event.py: Chứa các hàm xử lý sự kiện như con rắn ăn thức ăn, đâm vào tường, hoặc tự cắn vào thân mình.
 
 ĐÓNG GÓP
 Nếu bạn muốn đóng góp vào dự án, vui lòng tạo một pull request hoặc mở một issue trên GitHub.
