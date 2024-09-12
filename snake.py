@@ -18,6 +18,11 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    def remove_snake(self):
+        for segment in self.segments:
+            segment.hideturtle()
+            segment.clear()
+
 
 
 
