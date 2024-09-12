@@ -18,6 +18,10 @@ class ScoreMessage(Message):
     def __init__(self):
 
 
+        super().__init__()
+        self.score = 0 
+        self.goto(0, 260)
+        self.update_scoreboard()
 
 
 
