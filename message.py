@@ -53,6 +53,15 @@ class StartMessage(Message):
 
 class GameOverMessage(Message):
     def __init__(self):
+        super().__init__()
+
+    def show(self):
+        self.goto(0, 80)
+        self.write_message("Game Over! Try again?")
+
+    def hide(self):
+        self.clear()
+
 
 
 
