@@ -40,6 +40,14 @@ class ScoreMessage(Message):
 
 class StartMessage(Message):
     def __init__(self):
+        super().__init__()
+        self.goto(0, 40)
+
+    def show(self):
+        self.write_message("Press enter to start")
+
+    def hide(self):
+        self.clear()
 
 
 
