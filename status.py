@@ -6,6 +6,7 @@ class Status:
 
 
     def start(sefl): #Set trạng thái bắt đầu
+        self.is_start = True
 
 
     def game_over(sefl) #Trạng thái game over
