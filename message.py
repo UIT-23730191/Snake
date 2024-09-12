@@ -8,6 +8,10 @@ class Message(Turtle):
 
 
 
+        super().__init__()
+        self.color("red")   # Set màu chữ
+        self.penup()
+        self.hideturtle()
 
 class ScoreMessage(Message):
 
