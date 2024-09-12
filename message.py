@@ -23,6 +23,10 @@ class ScoreMessage(Message):
         self.goto(0, 260)
         self.update_scoreboard()
 
+    def update_scoreboard(self):
+        self.goto(0, 260)
+        self.write_message(f"Score: {self.score}")
+
 
 
 class StartMessage(Message):
