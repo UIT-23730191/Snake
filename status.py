@@ -10,5 +10,7 @@ class Status:
 
 
     def game_over(sefl) #Trạng thái game over
+        self.is_game_over = True
+        self.is_start = False
 
 
