@@ -14,4 +14,10 @@ def snake_hit_wall(snake, game_over_msg, status):
 
 
 def snake_hit_self(snake, game_over_msg, status):
-
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 10:
+            game_over_msg.show()
+            status.game_over()
+            return True
+    return False
+    
