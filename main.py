@@ -12,3 +12,11 @@ score_msg = ScoreMessage()
 start_msg = StartMessage()
 game_over_msg = GameOverMessage()
 status = Status()
+
+# Thiết lập các sự kiện bàn phím
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+screen.onkey(status.start, "Return")
