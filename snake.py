@@ -15,8 +15,11 @@ class Snake:
         segments (list): Danh sách các đoạn của con rắn.
         head (Turtle): Đoạn đầu tiên của con rắn.
     """
-    
+
     def __init__(self):
+        """
+        Khởi tạo đối tượng Snake với các đoạn ban đầu và đặt đầu rắn là vị trí đầu tiên
+        """
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
