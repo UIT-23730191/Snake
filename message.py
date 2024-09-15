@@ -19,6 +19,18 @@ class Message(Turtle):
         self.penup()# Đặt bút lên để không vẽ khi di chuyển.
         self.hideturtle()# Trạng thái hiển thị của thông báo.
 
+    def write_message(self, arg):
+        """
+        Viết thông báo lên màn hình.
+
+        Parameters:
+        arg (str): Nội dung thông báo.
+
+        Returns:
+        None
+        """
+        super().write(arg, align=ALIGNMENT, font=FONT)
+        
 class ScoreMessage(Message):
 
     def __init__(self):
