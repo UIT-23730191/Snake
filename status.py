@@ -14,6 +14,11 @@ class Status:
 
 
     def start(sefl): #Set trạng thái bắt đầu
+        """
+        Đặt trạng thái bắt đầu của trò chơi thành True.
+        Returns:
+        None
+        """
         self.is_start = True
 
 
