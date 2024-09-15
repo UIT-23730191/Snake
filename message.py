@@ -105,6 +105,9 @@ class StartMessage(Message):
         self.clear()
 
 class GameOverMessage(Message):
+    """
+    Lớp GameOverMessage kế thừa từ Message để hiển thị thông báo kết thúc trò chơi.
+    """
     def __init__(self):
         super().__init__()
 
