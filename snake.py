@@ -83,18 +83,30 @@ class Snake:
         self.segments[0].forward(MOVE_DISTANCE)
 
     def up(self):
+        """
+        Đổi hướng đầu rắn lên trên nếu nó không đang di chuyển xuống dưới.
+        """
         if self.head.heading() != DOWN:
             self.head.setheading(UP)
 
     def down(self):
+        """
+        Đổi hướng đầu rắn xuống dưới nếu nó không đang di chuyển lên trên.
+        """
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
 
     def left(self):
+        """
+        Đổi hướng đầu rắn sang trái nếu nó không đang di chuyển sang phải.
+        """
         if self.head.heading() != RIGHT:
             self.head.setheading(LEFT)
 
     def right(self):
+        """
+        Đổi hướng đầu rắn sang phải nếu nó không đang di chuyển sang trái.
+        """
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
