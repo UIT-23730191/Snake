@@ -30,6 +30,13 @@ class Snake:
         """
         self.remove_snake()
         self.__init__()
+    
+    def create_snake(self):
+        """
+        Tạo con rắn với các đoạn ban đầu tại các vị trí xác định.
+        """
+        for position in START_POSITION:
+            self.add_segment(position)
 
     def add_segment(self, position):
         new_segment = Turtle("square")
