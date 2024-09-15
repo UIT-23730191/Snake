@@ -82,6 +82,9 @@ class StartMessage(Message):
     Lớp StartMessage kế thừa từ Message để hiển thị thông báo bắt đầu trò chơi.
     """
     def __init__(self):
+        """
+        Khởi tạo đối tượng StartMessage và đặt vị trí hiển thị.
+        """
         super().__init__()
         self.goto(0, 40)
 
