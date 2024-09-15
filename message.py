@@ -11,6 +11,9 @@ class Message(Turtle):
         is_showing (bool): Trạng thái hiển thị của thông báo.
     """
     def __init__(self):
+        """
+        Khởi tạo đối tượng Message với các thuộc tính mặc định.
+        """
         super().__init__()
         self.color("red")   # Set màu chữ
         self.penup()
