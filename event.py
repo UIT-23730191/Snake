@@ -11,7 +11,22 @@ Functions:
 """
 
 def snake_eat_food(snake, food, score_msg):
-    if snake.head.distance(food) < 10:
+    """
+    Xử lý sự kiện khi rắn ăn thức ăn.
+
+    Hàm này kiểm tra xem đầu rắn có gần thức ăn không. Nếu đúng, nó sẽ:
+    1. Làm mới vị trí của thức ăn.
+    2. Tăng kích thước của rắn.
+    3. Tăng điểm số của người chơi.
+
+    Parameters:
+    snake (Snake): Đối tượng rắn.
+    food (Food): Đối tượng thức ăn.
+
+    Returns:
+    None
+    """
+    if snake.head.distance(food) < 15:
         food.refresh()
         snake.extend()
         score_msg.increase_score()
