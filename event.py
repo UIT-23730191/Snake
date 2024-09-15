@@ -52,12 +52,25 @@ def snake_hit_wall(snake, game_over_msg, status):
         return True
     return False
 
-
 def snake_hit_self(snake, game_over_msg, status):
+    """
+    Xử lý sự kiện khi rắn đụng thân mình.
+
+    Hàm này kiểm tra khoảng cách của đầu rắn có gần các thân mình của nó hay không. Các thân mình của rắn được lưu
+    trữ trong danh sách snake.segments. Nếu đầu rắn gần bất kỳ thân mình nào (khoảng cách nhỏ hơn 10), hàm sẽ hiển
+    thị thông báo "Game over" và cập nhật trạng thái game.
+
+    Parameters:
+    snake (Snake): Đối tượng rắn.
+    game_over_msg (GameOverMessage): Đối tượng thông báo game over.
+    status (Status): Đối tượng trạng thái game.
+
+    Returns:
+    None
+    """
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             game_over_msg.show()
             status.game_over()
             return True
     return False
-    
