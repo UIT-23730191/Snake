@@ -47,7 +47,19 @@ screen.onkey(status.start, "Return")
 
 # Vòng lặp chính của trò chơi
 while True:
-    # Các sự kiện của rắn
-    event.snake_eat_food(snake, food, score_msg)
-    event.snake_hit_wall(snake, game_over_msg, status)
-    event.snake_hit_self(snake, game_over_msg, status)
+    screen.update()
+    time.sleep(0.1)  # Tốt độ game, càng nhỏ game càng nhanh
+    if status.is_start:
+        start_msg.hide()
+        game_over_msg.hide()
+        if status.is_game_over:
+            snake.reset()
+            score_msg.reset()
+            status.is_game_over = False
+        snake.move()
+        # Các sự kiện của rắn
+        event.snake_eat_food(snake, food, score_msg)
+        event.snake_hit_wall(snake, game_over_msg, status)
+        event.snake_hit_self(snake, game_over_msg, status)
+    else:
+        start_msg.show()
