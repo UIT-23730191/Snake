@@ -39,6 +39,15 @@ class Snake:
             self.add_segment(position)
 
     def add_segment(self, position):
+        """
+        Thêm một đoạn mới vào con rắn tại vị trí xác định.
+
+        Parameters:
+        position (tuple): Vị trí (x, y) để thêm đoạn mới.
+
+        Returns:
+        None
+        """
         new_segment = Turtle("square")
         new_segment.color("black")
         new_segment.penup()
