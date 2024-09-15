@@ -127,6 +127,12 @@ class GameOverMessage(Message):
             self.is_showing = True
 
     def hide(self):
+        """
+        Ẩn thông báo kết thúc trò chơi.
+
+        Returns:
+        None
+        """
         self.clear()
 
 
