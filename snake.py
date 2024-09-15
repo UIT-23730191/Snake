@@ -69,6 +69,13 @@ class Snake:
         self.add_segment(self.segments[-1].position())
 
     def move(self):
+        """
+        Di chuyển con rắn về phía trước.
+
+        Phương thức này di chuyển con rắn bằng cách:
+        1. Di chuyển từng đoạn của con rắn đến vị trí của đoạn phía trước nó, bắt đầu từ đoạn cuối cùng.
+        2. Sau đó, di chuyển đầu rắn về phía trước một khoảng cách cố định.
+        """
         for seg_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
