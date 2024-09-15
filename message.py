@@ -116,6 +116,12 @@ class GameOverMessage(Message):
         self.goto(0,80)
 
     def show(self):
+        """
+        Hiển thị thông báo kết thúc trò chơi.
+
+        Returns:
+        None
+        """
         self.goto(0, 80)
         self.write_message("Game Over! Try again?")
 
