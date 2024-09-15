@@ -89,6 +89,11 @@ class StartMessage(Message):
         self.goto(0, 40)
 
     def show(self):
+        """
+        Hiển thị thông báo bắt đầu trò chơi.
+        Returns:
+        None
+        """
         self.write_message("Press enter to start")
 
     def hide(self):
