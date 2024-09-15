@@ -133,7 +133,9 @@ class GameOverMessage(Message):
         Returns:
         None
         """
-        self.clear()
+        if self.is_showing:
+            self.clear()
+            self.is_showing = False
 
 
 
