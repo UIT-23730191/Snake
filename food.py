@@ -19,8 +19,11 @@ class Food(Turtle):
         self.speed("fastest")  # Tốc độ di chuyển của thức ăn.
         self.refresh()
 
-def refresh(self):
-    random_x = random.randint(-150, 150)
-    random_y = random.randint(-150, 150)
-    self.goto(random_x, random_y)
+    def refresh(self):
+        """
+        Làm mới vị trí của thức ăn khi bắt đầu trò chơi hoặc bị rắn ăn.
+        """
+        random_x = random.randint(-250, 250)
+        random_y = random.randint(-250, 250)
+        self.goto(random_x, random_y)
 
