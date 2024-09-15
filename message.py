@@ -30,9 +30,14 @@ class Message(Turtle):
         None
         """
         super().write(arg, align=ALIGNMENT, font=FONT)
-        
-class ScoreMessage(Message):
 
+class ScoreMessage(Message):
+    """
+    Lớp ScoreMessage kế thừa từ Message để hiển thị và cập nhật điểm số.
+
+    Attributes:
+        score (int): Điểm số của người chơi.
+    """
     def __init__(self):
         super().__init__()
         self.score = 0 
