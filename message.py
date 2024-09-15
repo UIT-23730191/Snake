@@ -78,6 +78,9 @@ class ScoreMessage(Message):
         self.update_scoreboard()
     
 class StartMessage(Message):
+    """
+    Lớp StartMessage kế thừa từ Message để hiển thị thông báo bắt đầu trò chơi.
+    """
     def __init__(self):
         super().__init__()
         self.goto(0, 40)
