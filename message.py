@@ -39,6 +39,9 @@ class ScoreMessage(Message):
         score (int): Điểm số của người chơi.
     """
     def __init__(self):
+        """
+        Khởi tạo đối tượng ScoreMessage với điểm số ban đầu là 0 và đặt vị trí hiển thị.
+        """
         super().__init__()
         self.score = 0 
         self.goto(0, 260)
