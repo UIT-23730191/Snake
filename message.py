@@ -16,8 +16,8 @@ class Message(Turtle):
         """
         super().__init__()
         self.color("red")   # Set màu chữ
-        self.penup()
-        self.hideturtle()
+        self.penup()# Đặt bút lên để không vẽ khi di chuyển.
+        self.hideturtle()# Trạng thái hiển thị của thông báo.
 
 class ScoreMessage(Message):
 
