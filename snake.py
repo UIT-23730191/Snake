@@ -55,6 +55,9 @@ class Snake:
         self.segments.append(new_segment)
 
     def remove_snake(self):
+        """
+        Xóa tất cả các đoạn của con rắn khỏi màn hình.
+        """
         for segment in self.segments:
             segment.hideturtle()
             segment.clear()
