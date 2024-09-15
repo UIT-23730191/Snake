@@ -48,6 +48,12 @@ class ScoreMessage(Message):
         self.update_scoreboard()
 
     def update_scoreboard(self):
+        """
+        Cập nhật bảng điểm với điểm số hiện tại.
+
+        Returns:
+        None
+        """
         self.goto(0, 260)
         self.write_message(f"Score: {self.score}")
 
