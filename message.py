@@ -1,13 +1,8 @@
 from turtle import Turtle
 
-
 class Message(Turtle):
 
     def __init__(self):
-
-
-
-
         super().__init__()
         self.color("red")   # Set màu chữ
         self.penup()
@@ -16,8 +11,6 @@ class Message(Turtle):
 class ScoreMessage(Message):
 
     def __init__(self):
-
-
         super().__init__()
         self.score = 0 
         self.goto(0, 260)
@@ -36,8 +29,6 @@ class ScoreMessage(Message):
         self.clear()
         self.update_scoreboard()
     
-
-
 class StartMessage(Message):
     def __init__(self):
         super().__init__()
@@ -48,8 +39,6 @@ class StartMessage(Message):
 
     def hide(self):
         self.clear()
-
-
 
 class GameOverMessage(Message):
     def __init__(self):
