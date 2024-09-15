@@ -122,8 +122,9 @@ class GameOverMessage(Message):
         Returns:
         None
         """
-        self.goto(0, 80)
-        self.write_message("Game Over! Try again?")
+        if not self.is_showing:
+            self.write_message("Game Over! Try again?")
+            self.is_showing = True
 
     def hide(self):
         self.clear()
