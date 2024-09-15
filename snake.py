@@ -8,7 +8,14 @@ LEFT = 180
 RIGHT = 0
 
 class Snake:
+    """
+    Lớp Snake để tạo và điều khiển con rắn trong trò chơi.
 
+    Attributes:
+        segments (list): Danh sách các đoạn của con rắn.
+        head (Turtle): Đoạn đầu tiên của con rắn.
+    """
+    
     def __init__(self):
         self.segments = []
         self.create_snake()
