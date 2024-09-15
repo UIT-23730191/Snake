@@ -63,6 +63,9 @@ class Snake:
             segment.clear()
 
     def extend(self):
+        """
+        Thêm một đoạn mới vào cuối con rắn.
+        """
         self.add_segment(self.segments[-1].position())
 
     def move(self):
