@@ -67,6 +67,12 @@ class ScoreMessage(Message):
         self.clear()
         self.update_scoreboard()
     def reset(self):
+        """
+        Đặt lại điểm số về 0 và cập nhật bảng điểm.
+
+        Returns:
+        None
+        """
         self.score = 0
         self.clear()
         self.update_scoreboard()
