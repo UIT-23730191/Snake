@@ -25,6 +25,9 @@ class Snake:
         self.head = self.segments[0]
     
     def reset(self):
+        """
+        Đặt lại con rắn về trạng thái ban đầu.
+        """
         self.remove_snake()
         self.__init__()
 
