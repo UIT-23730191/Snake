@@ -97,6 +97,11 @@ class StartMessage(Message):
         self.write_message("Press enter to start")
 
     def hide(self):
+        """
+        Ẩn thông báo bắt đầu trò chơi.
+        Returns:
+        None
+        """
         self.clear()
 
 class GameOverMessage(Message):
