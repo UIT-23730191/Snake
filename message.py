@@ -4,7 +4,12 @@ ALIGNMENT = "center"
 FONT = ("Arial", 24, "normal")
 
 class Message(Turtle):
+ """
+    Lớp Message kế thừa từ Turtle để hiển thị các thông báo trong trò chơi.
 
+    Attributes:
+        is_showing (bool): Trạng thái hiển thị của thông báo.
+    """
     def __init__(self):
         super().__init__()
         self.color("red")   # Set màu chữ
