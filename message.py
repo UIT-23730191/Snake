@@ -58,7 +58,11 @@ class ScoreMessage(Message):
         self.write_message(f"Score: {self.score}")
 
     def increase_score(self):
-
+        """
+        Tăng điểm số và cập nhật bảng điểm.
+        Returns:
+        None
+        """
         self.score += 1
         self.clear()
         self.update_scoreboard()
