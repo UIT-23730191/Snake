@@ -23,6 +23,11 @@ class Status:
 
 
     def game_over(sefl) #Trạng thái game over
+        """
+        Đặt trạng thái kết thúc của trò chơi thành True và trạng thái bắt đầu thành False.
+        Returns:
+        None
+        """
         self.is_game_over = True
         self.is_start = False
 
