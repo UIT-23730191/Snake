@@ -88,7 +88,6 @@ class StartMessage(Message):
     """
     Lớp StartMessage kế thừa từ Message để hiển thị thông báo bắt đầu trò chơi.
     """
-
     def __init__(self):
         """
         Khởi tạo đối tượng StartMessage và đặt vị trí hiển thị.
@@ -99,18 +98,24 @@ class StartMessage(Message):
     def show(self):
         """
         Hiển thị thông báo bắt đầu trò chơi.
+
         Returns:
         None
         """
-        self.write_message("Press enter to start")
+        if not self.is_showing:
+            self.write_message("Press enter to start")
+            self.is_showing = True
 
     def hide(self):
         """
         Ẩn thông báo bắt đầu trò chơi.
+
         Returns:
         None
         """
-        self.clear()
+        if self.is_showing:
+            self.clear()
+            self.is_showing = False
 
 
 class GameOverMessage(Message):
