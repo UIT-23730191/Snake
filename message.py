@@ -11,6 +11,7 @@ class Message(Turtle):
     Attributes:
         is_showing (bool): Trạng thái hiển thị của thông báo.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng Message với các thuộc tính mặc định.
@@ -33,6 +34,7 @@ class Message(Turtle):
         """
         super().write(arg, align=ALIGNMENT, font=FONT)
 
+
 class ScoreMessage(Message):
     """
     Lớp ScoreMessage kế thừa từ Message để hiển thị và cập nhật điểm số.
@@ -40,12 +42,13 @@ class ScoreMessage(Message):
     Attributes:
         score (int): Điểm số của người chơi.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng ScoreMessage với điểm số ban đầu là 0 và đặt vị trí hiển thị.
         """
         super().__init__()
-        self.score = 0 
+        self.score = 0
         self.goto(0, 260)
         self.update_scoreboard()
 
@@ -56,18 +59,19 @@ class ScoreMessage(Message):
         Returns:
         None
         """
-        self.goto(0, 260)
         self.write_message(f"Score: {self.score}")
 
     def increase_score(self):
         """
         Tăng điểm số và cập nhật bảng điểm.
+
         Returns:
         None
         """
         self.score += 1
         self.clear()
         self.update_scoreboard()
+
     def reset(self):
         """
         Đặt lại điểm số về 0 và cập nhật bảng điểm.
@@ -78,11 +82,13 @@ class ScoreMessage(Message):
         self.score = 0
         self.clear()
         self.update_scoreboard()
-    
+
+
 class StartMessage(Message):
     """
     Lớp StartMessage kế thừa từ Message để hiển thị thông báo bắt đầu trò chơi.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng StartMessage và đặt vị trí hiển thị.
@@ -106,16 +112,18 @@ class StartMessage(Message):
         """
         self.clear()
 
+
 class GameOverMessage(Message):
     """
     Lớp GameOverMessage kế thừa từ Message để hiển thị thông báo kết thúc trò chơi.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng GameOverMessage và đặt vị trí hiển thị.
         """
         super().__init__()
-        self.goto(0,80)
+        self.goto(0, 80)
 
     def show(self):
         """
@@ -138,7 +146,3 @@ class GameOverMessage(Message):
         if self.is_showing:
             self.clear()
             self.is_showing = False
-
-
-
-
