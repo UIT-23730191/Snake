@@ -3,8 +3,9 @@ from turtle import Turtle
 ALIGNMENT = "center"
 FONT = ("Arial", 24, "normal")
 
+
 class Message(Turtle):
- """
+    """
     Lớp Message kế thừa từ Turtle để hiển thị các thông báo trong trò chơi.
 
     Attributes:
@@ -15,9 +16,10 @@ class Message(Turtle):
         Khởi tạo đối tượng Message với các thuộc tính mặc định.
         """
         super().__init__()
-        self.color("red")   # Set màu chữ
-        self.penup()# Đặt bút lên để không vẽ khi di chuyển.
-        self.hideturtle()# Trạng thái hiển thị của thông báo.
+        self.color("red")  # Set màu chữ của thông báo.
+        self.penup()  # Đặt bút lên để không vẽ khi di chuyển.
+        self.hideturtle()  # Ẩn con rùa.
+        self.is_showing = False  # Trạng thái hiển thị của thông báo.
 
     def write_message(self, arg):
         """
