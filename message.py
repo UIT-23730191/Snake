@@ -3,21 +3,24 @@ from turtle import Turtle
 ALIGNMENT = "center"
 FONT = ("Arial", 24, "normal")
 
+
 class Message(Turtle):
- """
+    """
     Lớp Message kế thừa từ Turtle để hiển thị các thông báo trong trò chơi.
 
     Attributes:
         is_showing (bool): Trạng thái hiển thị của thông báo.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng Message với các thuộc tính mặc định.
         """
         super().__init__()
-        self.color("red")   # Set màu chữ
-        self.penup()# Đặt bút lên để không vẽ khi di chuyển.
-        self.hideturtle()# Trạng thái hiển thị của thông báo.
+        self.color("red")  # Set màu chữ của thông báo.
+        self.penup()  # Đặt bút lên để không vẽ khi di chuyển.
+        self.hideturtle()  # Ẩn con rùa.
+        self.is_showing = False  # Trạng thái hiển thị của thông báo.
 
     def write_message(self, arg):
         """
@@ -31,6 +34,7 @@ class Message(Turtle):
         """
         super().write(arg, align=ALIGNMENT, font=FONT)
 
+
 class ScoreMessage(Message):
     """
     Lớp ScoreMessage kế thừa từ Message để hiển thị và cập nhật điểm số.
@@ -38,12 +42,13 @@ class ScoreMessage(Message):
     Attributes:
         score (int): Điểm số của người chơi.
     """
+
     def __init__(self):
         """
         Khởi tạo đối tượng ScoreMessage với điểm số ban đầu là 0 và đặt vị trí hiển thị.
         """
         super().__init__()
-        self.score = 0 
+        self.score = 0
         self.goto(0, 260)
         self.update_scoreboard()
 
@@ -54,18 +59,19 @@ class ScoreMessage(Message):
         Returns:
         None
         """
-        self.goto(0, 260)
         self.write_message(f"Score: {self.score}")
 
     def increase_score(self):
         """
         Tăng điểm số và cập nhật bảng điểm.
+
         Returns:
         None
         """
         self.score += 1
         self.clear()
         self.update_scoreboard()
+
     def reset(self):
         """
         Đặt lại điểm số về 0 và cập nhật bảng điểm.
@@ -76,7 +82,8 @@ class ScoreMessage(Message):
         self.score = 0
         self.clear()
         self.update_scoreboard()
-    
+
+
 class StartMessage(Message):
     """
     Lớp StartMessage kế thừa từ Message để hiển thị thông báo bắt đầu trò chơi.
@@ -91,18 +98,25 @@ class StartMessage(Message):
     def show(self):
         """
         Hiển thị thông báo bắt đầu trò chơi.
+
         Returns:
         None
         """
-        self.write_message("Press enter to start")
+        if not self.is_showing:
+            self.write_message("Press enter to start")
+            self.is_showing = True
 
     def hide(self):
         """
         Ẩn thông báo bắt đầu trò chơi.
+
         Returns:
         None
         """
-        self.clear()
+        if self.is_showing:
+            self.clear()
+            self.is_showing = False
+
 
 class GameOverMessage(Message):
     """
@@ -113,7 +127,7 @@ class GameOverMessage(Message):
         Khởi tạo đối tượng GameOverMessage và đặt vị trí hiển thị.
         """
         super().__init__()
-        self.goto(0,80)
+        self.goto(0, 80)
 
     def show(self):
         """
@@ -136,7 +150,3 @@ class GameOverMessage(Message):
         if self.is_showing:
             self.clear()
             self.is_showing = False
-
-
-
-
