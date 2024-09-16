@@ -122,7 +122,6 @@ class GameOverMessage(Message):
     """
     Lớp GameOverMessage kế thừa từ Message để hiển thị thông báo kết thúc trò chơi.
     """
-
     def __init__(self):
         """
         Khởi tạo đối tượng GameOverMessage và đặt vị trí hiển thị.
